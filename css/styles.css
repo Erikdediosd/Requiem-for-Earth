@@ -1,5 +1,7 @@
 :root{
     --primary: #93a87e;
+    --secondary: #bade57;
+    --tertiary: #56877d;
 }
 html{
     font-size: 62.5%;
@@ -95,7 +97,7 @@ p{
 
 .LOGO{
     position: absolute;
-    animation: lg-an4 2s ease-in-out 17s forwards;
+    animation: lg-an4 2s 17s forwards ease-in-out;
 }
 .lgicon{
     width: min(30rem, 40%);
@@ -140,14 +142,26 @@ p{
     0%{
         scale: 1;
     }
+    75%{
+        opacity: 0;
+    }
     100%{
         transform: translateY(-50%);
-        scale: 0.8;
+        scale: 0.7;
+        opacity: 0;
     }    
+}
+
+
+.GENERAL{
+    height: 90vh;
 }
 
 .gen-cont{
     padding:min(2rem, 4%) min(3rem, 6%);
+}
+.cont1{
+    padding-bottom: 0;
 }
 .cont0{
     box-shadow: 1px 13px 29px -2px rgba(0,0,0,0.25);
@@ -157,10 +171,23 @@ p{
 .cont0 img{
     width: 20rem;
 }
+.contqr{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contqr img{
+    width: min(30rem, 60%);
+    border: var(--tertiary) 1.6rem solid;
+}
+
 .contitle{
     width: 100%;
     display: flex;
     justify-content: center;
+    opacity: 0;
+    animation: last-anim 1s 20.8s forwards ease-in-out;
 }
 .contitle h2{
     padding: 2rem;
@@ -172,9 +199,36 @@ p{
     border-radius: 6.4rem;
 }
 .cont-subtitle{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     display: inline-block;
     padding: 0.8rem 1rem;
     border-radius: 2.4rem;
     margin-bottom: 1rem;
+}
+.footer{
+    background-color: var(--tertiary);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+.footer .gen-cont p{
+    color: white;
+    font-size: 1.8rem;
+}
+.last-anim{
+    opacity: 0;
+    animation: last-anim 2s 19s forwards ease-in-out;
+}
+.cont0{
+    opacity: 0;
+    animation: last-anim 1s 20s forwards ease-in-out;
+}
+
+@keyframes last-anim {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
