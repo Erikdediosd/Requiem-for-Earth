@@ -1,0 +1,180 @@
+:root{
+    --primary: #93a87e;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+body{
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+main{
+    position: relative;
+}
+h2{
+    font-weight: 600;
+}
+h3{
+    font-weight: 500;
+}
+p{
+    font-weight: 300;
+}
+
+.center-abs-elem{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+}
+.block{
+    width: 100vw;
+    height: 100vh;
+}
+
+.first-block{
+    position: absolute;
+    animation: cbt-an3 1s 10s forwards ease-in;
+}
+.cbtlogo{
+    width: min(28rem, 40%);
+    height: auto;
+    position: absolute;
+    animation: cbt-an1 3s 2s forwards ease;
+}
+@keyframes cbt-an1 {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 0.75;
+        transform: translateY(-45vh);
+    }
+}
+.cbttext{
+    font-size: 2.2rem;
+    height: 10rem;
+    position: absolute;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+    animation: cbt-an2 5s 4s forwards ease;
+    z-index: -1;
+}
+@keyframes cbt-an2 {
+    0%{
+        color: transparent;
+    }
+    25%{
+        color: black;
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-22vh);
+        color: black;
+    }    
+}
+@keyframes cbt-an3 {
+    0%{
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.LOGO{
+    position: absolute;
+    animation: lg-an4 2s ease-in-out 17s forwards;
+}
+.lgicon{
+    width: min(30rem, 40%);
+    position: absolute;
+    animation: lg-an1 1s 11s forwards ease-in, lg-an2 2s 13s forwards ease;
+    opacity: 0;
+}
+.lgtext{
+    width: min(30rem, 40%);
+    position: absolute;
+    transform: translateX(34%);
+    animation: lg-an3 1s 15s forwards ease-out;
+    opacity: 0;
+}
+@keyframes lg-an1{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes lg-an2 {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(-90%);
+        scale: 0.5;
+    }
+}
+@keyframes lg-an3 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(32%);
+    }
+}
+@keyframes lg-an4 {
+    0%{
+        scale: 1;
+    }
+    100%{
+        transform: translateY(-50%);
+        scale: 0.8;
+    }    
+}
+
+.gen-cont{
+    padding:min(2rem, 4%) min(3rem, 6%);
+}
+.cont0{
+    box-shadow: 1px 13px 29px -2px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 1px 13px 29px -2px rgba(0,0,0,0.25);
+    -moz-box-shadow: 1px 13px 29px -2px rgba(0,0,0,0.25);
+}
+.cont0 img{
+    width: 20rem;
+}
+.contitle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contitle h2{
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    width: 60%;
+    border-radius: 6.4rem;
+}
+.cont-subtitle{
+    background-color: var(--primary);
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    border-radius: 2.4rem;
+    margin-bottom: 1rem;
+}
